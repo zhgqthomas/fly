@@ -221,7 +221,8 @@ class Fly {
                         // Some third engine implementation may transform the response text to json object automatically,
                         // so we should test the type of response before transforming it
                         && !utils.isObject(response)) {
-                        response = JSON.parse(response);
+                        // 因 quickdraw 返回格式问题 故需要注释改行代码
+                        // response = JSON.parse(response);
                     }
                     var headers = {};
                     var items = (engine.getAllResponseHeaders() || "").split("\r\n");
